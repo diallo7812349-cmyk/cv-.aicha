@@ -10,42 +10,124 @@
 <body>
     <div class="conteneur">
       <div class="gauche">  
-    <div> <img src="Snapchat-549349827.jpg" height="120" width="100" class="c1" alt=""> </div>
-    <h2>coordonnées</h2>
-     <p> <img src="../IMAGES/silhouette-de-poignee-de-telephone.png" height="15" width="15" alt=""> 782261607</p>
-     <p> <img src="../IMAGES/enveloppe.png" height="15" width="15" alt=""> diallo7812349@gmail.com</p>
-     <p> <img src="../IMAGES/accueil.png" height="15" width="15" alt=""> mounkoutala</p>
-     </ul>
+    <div> <img src="Snapchat-549349827.jpg" height="80" width="50" class="c1" alt=""> </div>
+    <h1 id="nom">AISSATA DIALLO</h1>
+    <p>Etudiante en informatique</p>
+   <hr>
+    <h2>Coordonnées</h2>
+<div class="coordonnees">
+  <p>
+    <img src="IMAGES/silhouette-de-poignee-de-telephone.png" alt="Téléphone" class="icone">
+    <span>782261607</span>
+  </p>
+
+  <p>
+    <img src="IMAGES/enveloppe.png" alt="Email" class="icone">
+    <a href="#" id="email-link">diallo7812349@gmail.com</a>
+  </p>
+
+  <p>
+    <img src="IMAGES/accueil.png" alt="Adresse" class="icone">
+    <span>Mounkoutala</span>
+  </p>
+</div>
+     <hr>
     <h2>langues</h2>
     <ul>
       <li>  français </li>
        <li> Anglais</li> 
       <li>  pulaar</li> </ul>
+      <hr>
    <h2>loisirs</h2>
    <ul>
    <li>sport</li>  
    <li>lecture </li> 
    </ul>
+   <hr>
    </div>
 <div class="droite">
-    <h1>AISSATA DIALLO</h1>
+  <h2>profil</h2>
+    <p>
+      étant Etudiante passionné par la technologie de l'informatique <br>
+      je suis curieuse,embitieuse et motivée, j'ai envi de developper des compétences
+    </p>
+    <hr>
+    <h2>expériences</h2>
+    <p>stage à la sonatel où j'ai apprie à develloper des compétences ,ça m'a permi de travailler en équipe,de prendre la parole en publique
+      je communique bien avec les gens,je sais gérer ma colére en cas de probléme
+    </p>
+    <hr>
    <h2>diplomes et parcours</h2>
    <h4>2024/2025:</h4>
     <p>licence2 en informatique </p>
     <h4>2023/2024:</h4>
    <p> licence1 en informatique</p>
    <h4>2022/2023:</h4>
-   <p> Baccalaureat, lycée de médina wandifa, série s2, mention assez bien</p> 
-    <h2>compétences</h2>
+   <p> Baccalaureat, lycée de médina wandifa, série s2, mention assez bien</p>
+   <hr> 
+    <h2>compétences personnelles</h2>
     <ul>
        <li>SQL </li>
        <li>langageC</li>
         <li>HTML/CSS</li> 
        <li> excel</li> 
         <li>powerpoint </li>
-        
-        
+    </ul>
+        <hr>
+        <h2>qualités</h2>
+   <ul>
+    <li>ambitieuse</li>
+    <li>courageuse</li>
+    <li>motivé</li>
+    <li>curieuse</li>
+    <li>travaille en équipe</li>
+   </ul>
+   <hr>
+   <h2>autres</h2>
+   <ul>
+    <li>permis de conduire</li>
+    <li>coiffures</li>
+    <li>
+      j'ai un certificat d'attestaion de IA par la force.N
+    </li>
+   </ul>  
    </div>
 </div>
+    <script>
+  const emailLink = document.getElementById("email-link");
+
+  emailLink.addEventListener("click", function (event) {
+    event.preventDefault(); // Empêche l'ouverture du client mail
+    window.location.href = "https://www.google.com"; // Redirection
+  });
+</script>
+<script>
+  // Tableau de couleurs pour le prénom et le nom
+const couleurs = ["#e74c3c", "#27ae60", "#2980b9", "#f1c40f", "#9b59b6"];
+let index = 0;
+
+// Fonction pour changer la couleur du nom toutes les 800ms
+setInterval(() => {
+  const nom = document.getElementById("nom");
+  nom.style.color = couleurs[index];
+  index = (index + 1) % couleurs.length;
+}, 800);
+</script>
+<script>
+// Quand la page se charge
+window.addEventListener("load", function() {
+  // On demande à l'utilisateur le mode souhaité
+  const choix = prompt("Souhaitez-vous utiliser le mode clair ou sombre ? (écrivez clair ou sombre)").toLowerCase();
+
+  if (choix === "sombre") {
+    document.body.classList.add("mode-sombre");
+    document.body.classList.remove("mode-clair");
+  } else {
+    document.body.classList.add("mode-clair");
+    document.body.classList.remove("mode-sombre");
+  }
+});
+</script>
 </body>
 </html>
+
